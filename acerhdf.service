@@ -1,0 +1,15 @@
+[Unit]
+Description=Acerhdf Enabler
+ConditionPathExists=/sys/class/thermal/thermal_zone0/mode
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/acerhdf start
+ExecStop=/usr/bin/acerhdf stop
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
