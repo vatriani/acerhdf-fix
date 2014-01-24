@@ -1,4 +1,4 @@
-##acerhdf-fix
+#acerhdf-fix
 
 activate acerhdf kernelmodule by systemd
 
@@ -8,31 +8,34 @@ activate acerhdf kernelmodule by systemd
 
 
 
-#how to install:
----
+##how to install:
 
 copying acerhdf bash script to /usr/bin
-$ cp acerhdf /usr/bin/
+
+    cp acerhdf /usr/bin/
 
 copying acerhdf.service to
-# cp acerhdf.service /etc/systemd/system/
+
+    cp acerhdf.service /etc/systemd/system/
 
 enable new service
-$ systemctl enable acerhdf.service
+
+    systemctl enable acerhdf.service
 
 
 
-#optional:
+##optional:
 
 integrate new acerhdf version to kernel sources
-$ patch -Np1 -i acerhdf.patch
+
+    patch -Np1 -i acerhdf.patch
 
 
 
-#change-log:
+##change-log:
 v1	all things running
 
 
 
-#tested systems:
+##tested systems:
 acer aspire one a110l
